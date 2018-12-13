@@ -51,7 +51,7 @@ app.get('/' , (req , res) => {
         welmessage : 'welcome rushita',
          
     });
-  //  res.send('<h1>hello Rushita</h1>');
+//    res.send('<h1>hello Rushita</h1>');
 //    res.send({
 //        name : 'Rushita',
 //        like : [
