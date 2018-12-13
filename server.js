@@ -6,7 +6,7 @@ const port = process.env.PORT || 3000;
 var app = express();
 
 console.log(port);
-hbs.registerPartials(__dirname +'//Views/partials');
+hbs.registerPartials(__dirname +'/views/partials');
 app.set('view engine','hbs');
 
 
@@ -68,11 +68,11 @@ app.get('/about',(req,res) =>{
     });
 }); 
 
-app.get('/bad',(req,res) =>{
-   res.send({
-       errorMessage: 'unable to handle request'
-   }) ;
-});
+//app.get('/bad',(req,res) =>{
+//   res.send({
+//       errorMessage: 'unable to handle request'
+//   }) ;
+//});
 
 app.listen(port,() =>{
     console.log(`Server is up on port ${port}`);
