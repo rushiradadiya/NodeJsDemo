@@ -1,7 +1,7 @@
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
-
+const port = process.env.PORT || 4000;
 var app = express();
 
 
@@ -27,9 +27,12 @@ app.use((req,res,next)=>{
 });
 
 
-app.use((req,res,next)=>{
-    res.render('maintenance.hbs');
-});
+
+
+
+//app.use((req,res,next)=>{
+//    res.render('maintenance.hbs');
+//});
 
 hbs.registerHelper('getcurrentYear',() =>{
                    return new Date().getFullYear()
@@ -70,6 +73,6 @@ app.get('/bad',(req,res) =>{
    }) ;
 });
 
-app.listen(4000,() =>{
-    console.log('Server is up on 4000 port');
+app.listen(port,() =>{
+    console.log(`Server is up on ${port}`);
 });
